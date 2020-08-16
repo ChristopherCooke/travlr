@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 //uses the trips controller we made this module (app_api/controllers/trips.js)
 const tripsController = require('../controllers/trips');
 //display all trips
@@ -10,3 +10,5 @@ router
 router 
     .route('/trips/:tripCode')
     .get(tripsController.tripsFindByCode);
+
+module.exports = router;
